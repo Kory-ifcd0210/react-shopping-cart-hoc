@@ -1,8 +1,6 @@
 import React from "react";
 
-import AppHeader from "../../components/AppHeader";
-import Main from "../../components/Main";
-import Footer from "../../components/Footer";
+
 import ProductsListing from "../../components/ProductsListing";
 import Cart from "../../components/Cart";
 
@@ -27,9 +25,7 @@ function Home({
   handleChange,
 }) {
   return (
-    <>
-      <AppHeader />
-      <Main className="container-fluid">
+
         <div className="row">
           <div className="col col-8">
             <div className="row">
@@ -77,9 +73,7 @@ function Home({
             handleChange={handleChange}
           />
         </div>
-      </Main>
-      <Footer />
-    </>
+
   );
 }
 

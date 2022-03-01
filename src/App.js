@@ -245,18 +245,18 @@ class App extends Component {
             <Home
               {...routeProps}
               // pass in the following prop so that it has a container-fluid class
-              // fullWidth
-              cartItems={cartItems}
-              products={products}
-              isLoading={isLoading}
-              hasError={hasError}
-              loadingError={loadingError}
-              handleDownVote={this.handleDownVote}
-              handleUpVote={this.handleUpVote}
-              handleSetFavorite={this.handleSetFavorite}
-              handleAddToCart={this.handleAddToCart}
-              handleRemove={this.handleRemove}
-              handleChange={this.handleChange}
+                fullWidth
+                cartItems={cartItems}
+                products={products}
+                isLoading={isLoading}
+                hasError={hasError}
+                loadingError={loadingError}
+                handleDownVote={this.handleDownVote}
+                handleUpVote={this.handleUpVote}
+                handleSetFavorite={this.handleSetFavorite}
+                handleAddToCart={this.handleAddToCart}
+                handleRemove={this.handleRemove}
+                handleChange={this.handleChange}
             />
           )}
         />

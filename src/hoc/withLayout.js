@@ -1,8 +1,9 @@
-// import React from "react";
+/* eslint-disable no-unused-vars */
+import React from "react";
 
-// import AppHeader from "../components/AppHeader";
-// import Footer from "../components/Footer";
-// import Main from "../components/Main";
+import AppHeader from "../components/AppHeader";
+import Footer from "../components/Footer";
+import Main from "../components/Main";
 
 function getDisplayName(WrappedComponent) {
   return WrappedComponent.displayName || WrappedComponent.name || "Component";
@@ -13,6 +14,19 @@ function withLayout(WrappedComponent) {
   WrappedComponent.displayName = `withLayout(${getDisplayName(
     WrappedComponent,
   )})`;
+
+
+function WrapperComponent({...props}){
+  return (
+    <>
+    <AppHeader />
+   *    <Main className={props.fullWidth ? "container-fluid" : "container"}>
+   *          <WrappedComponent {...props} />
+   *        </Main>
+   *    <Footer />
+    </>
+  )
+}
 
   /**
    * 1. create a function named WrapperComponent()
@@ -26,7 +40,7 @@ function withLayout(WrappedComponent) {
    *    3.3 <Footer />
    */
 
-  return null;
+  return WrapperComponent;
 }
 
 export default withLayout;
